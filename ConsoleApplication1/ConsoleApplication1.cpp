@@ -22,7 +22,7 @@ void jumpLine() {
 void Fighting() {
     cout << "*Slash*" << endl;
     
-    void jumpLine();
+    void JumpLine();
     cout << "You gained Strength Skill" << endl;
 }
 
@@ -47,7 +47,7 @@ int main() {
     int MagicDice = ((rand() % 6) + 1) * 3;
 
     
-    int stamina = 6;
+    int Stamina = 6;
     int PlayerMoney = 100;
 
     
@@ -96,10 +96,10 @@ int main() {
     cout << "3 is berserker" << endl;
     cout << "anything more is a peasant" << endl;
 
-    int gameclass = 0;
-    cin >> gameclass;
+    int Gameclass = 0;
+    cin >> Gameclass;
 
-    switch (gameclass) {
+    switch (Gameclass) {
     case 1:
         cout << "You are a mage" << endl;
         break;
@@ -123,7 +123,7 @@ int main() {
     do {
         Fighting();
         StrengthDice++; 
-        stamina --;     
+        Stamina --;     
     } while (StrengthDice < 10);
 
     jumpLine();
@@ -134,6 +134,8 @@ int main() {
     cout << "You notice something on the floor and pick it up" << endl;
 
     FatStackOfCashGenerator(&PlayerMoney);
+
+
     cout << "You collected somebody's money from the floor! Your money is now: " << PlayerMoney << endl;
 
     return 0; // Explicit return statement for clarity.
